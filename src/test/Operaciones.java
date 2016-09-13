@@ -46,7 +46,7 @@ public class Operaciones {
 	public static int test(int numero){
 		
 		for(int i=1;i<numero+1;i++){
-			return i+numero;	
+			return i+numero;
 		}
 		return numero;
 	}
