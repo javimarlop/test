@@ -1,8 +1,10 @@
 package test;
 
+import java.util.Arrays;
+
 public class Operaciones {
 	
-	public boolean esPrimo(int numero){
+	public static boolean esPrimo(int numero){
 		if(numero==0){
 			System.out.println("No ceros!");
 			return false;
@@ -14,6 +16,20 @@ public class Operaciones {
 			}
 		}
 		return true;
+	}
+
+	public static void mostrarDivisoresPrimos(int numero){
+		if(numero==0){
+			System.out.println("No ceros!");
+		}else{
+			for(int i=1;i<numero+1;i++){
+				if(numero%i == 0){
+					if(esPrimo(i)){
+					System.out.println(i);
+					}
+				}
+			}				
+		}
 	}
 	
 	public static void mostrarDivisores(int numero){
@@ -28,28 +44,26 @@ public class Operaciones {
 		}
 	}
 
-	public static int mostrarDivisores2(int numero){
+	public static String mostrarDivisores2(int numero){
 		if(numero==0){
 			System.out.println("No ceros!");
 			//return numero;
 		}else{
-			for(int i=2;i<numero+1;i++){
+			int[] res = new int[numero];
+			int j = -1;
+			for(int i=1;i<numero+1;i++){
 				if(numero%i == 0){
-					return i;	
+					++j;
+					res[j] = i;
+						
 				}
-			}				
+			}
+			return Arrays.toString(res);
 		}
 		System.out.println("Sin divisores!");
-		return numero;
+		return String.valueOf(numero);
 	}
 
-	public static int test(int numero){
-		
-		for(int i=1;i<numero+1;i++){
-			return i+numero;
-		}
-		return numero;
-	}
 	
 //	public static void main(String[] args){
 //		Operaciones op = new Operaciones();
