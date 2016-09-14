@@ -64,7 +64,35 @@ public class Operaciones {
 		return String.valueOf(numero);
 	}
 
+	public void fibonacci (int num){
+		long a = 0, b = 1;
+
+		for (int i = 1; i <= num; i++) {
+		    a = a + b;
+		    b = a - b;
+		    System.out.println(a); 
+		}
+		}
+
+	public void fibonacci2 (int num){
+		long a = 0, b = 1;
+
+		for (int i = 1; i <= num; i++) {
+		    a = a + b;
+		    b = a - b;
+		    System.out.println(a); 
+		}
+		}
 	
+		public void factorial (int nume){
+			 int k = 1;
+			 for (int i = 1; i <= nume; i++) {
+			  //k =( k * i);
+			  k *= i;
+			 }
+			  System.out.println(k);
+			}
+		
 //	public static void main(String[] args){
 //		Operaciones op = new Operaciones();
 //		System.out.println(op.esPrimo(10));
