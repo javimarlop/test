@@ -26,8 +26,10 @@ public class Main {
 //				}
 
 			
-			op.fibonacci(5);
+			//op.fibonacci(5);
 			//op.factorial(3);
+			
+			System.out.println(op.valor);
 	}
 
 }

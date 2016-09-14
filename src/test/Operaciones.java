@@ -4,6 +4,12 @@ import java.util.Arrays;
 
 public class Operaciones {
 	
+	int valor; //hace falta definirla aquí (en la clase fuera del constructor) para que se vea al instanciar la clase.
+	
+	public Operaciones(){
+		this.valor = 10; //se pone this. para que ese valor vaya a la variable de clase.
+	}
+	
 	public static boolean esPrimo(int numero){
 		if(numero==0){
 			System.out.println("No ceros!");
