@@ -29,7 +29,35 @@ public class Main {
 			//op.fibonacci(5);
 			//op.factorial(3);
 			
-			System.out.println(op.valor);
+			//System.out.println(op.valor);
+			
+			//declaraciones de array
+			Libro[] libros = new Libro[3];
+			int[] numeros = new int[2];
+			String[] diasLab = {"Lunes","Martes","Miercoles"};
+			
+			//System.out.println(diasLab.length);
+			//System.out.println(diasLab[2]);
+			
+			//System.out.println(diasLab); //referencia al objeto
+			
+			// Recorrer array version 1
+//			for(int i=0;i<diasLab.length;i++){
+//				System.out.println(diasLab[i]);
+//			}
+			
+//			// Recorrer array version 2
+//			for(String dia:diasLab){
+//				System.out.println(dia);
+//			}
+			
+			String a1 = "kk";
+			String a2 = "kk";
+			
+			System.out.println(a1.equals(a2));
+			System.out.println(a1==a2);
+			
+			// si queremos saber si dos personas son iguales hay que sobreescribir el metodo equals y decidir que parametros hacen que sean iguales.
 	}
 
 }
