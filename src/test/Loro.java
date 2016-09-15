@@ -44,5 +44,9 @@ public class Loro extends Ave {
 			break;
 		}
 	}
+	
+	public void cantar(){
+		System.out.println("Piiio-piiiio loro bonito");	
+	}
 
 }

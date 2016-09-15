@@ -7,6 +7,8 @@ public class Main {
 		
 		Loro loro1 = new Loro("M",6,"E","amarillo");
 		Piolin piolin1 = new Piolin("H",8,16,5);
+		//Ave ave1 = new Ave("H",12); // al hacer abstracta la clase aves ya no se pueden crear aves porque no tiene sentido usar ese nivel de generalizacion
+		Canario canario1 = new Canario("M",5);
 		
 		loro1.quienSoy();
 		piolin1.quienSoy();
@@ -19,6 +21,10 @@ public class Main {
 		loro1.region = "N";
 		
 		Ave.numAves();
+		
+		loro1.cantar();
+		piolin1.cantar();
+		canario1.cantar(); // No hay resultado porque es un método vacío
 		
 			//Primero generamos un objeto de la clase operaciones para poder usar los métodos.
 			//Operaciones op = new Operaciones();

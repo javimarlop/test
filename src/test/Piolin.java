@@ -8,4 +8,8 @@ public class Piolin extends Canario {
 		super(sexo,edad,tamaño);
 		this.numPel = numPel;
 	}
+	
+	public void cantar(){
+		System.out.println("Pio-pio soy un Piolín");		
+	}
 }

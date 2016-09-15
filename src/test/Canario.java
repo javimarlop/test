@@ -36,4 +36,8 @@ public class Canario extends Ave {
 			System.out.println("Bajo");
 		}
 	}
+	
+	public void cantar(){
+		
+	}
 }

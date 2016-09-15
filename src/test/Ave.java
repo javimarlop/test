@@ -1,10 +1,11 @@
 package test;
 
-public class Ave {
+public abstract class Ave {
 
 	String sexo;
 	int edad;
 	static int numAves;
+	DatosPersonales nombres;
 	
 	public Ave(String sexo , int edad){
 		this.sexo = sexo;
@@ -20,4 +21,7 @@ public class Ave {
 		System.out.println(this.sexo);
 		System.out.println(this.edad);
 	}
+	
+	public abstract void cantar();
+	
 }
