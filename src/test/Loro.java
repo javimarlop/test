@@ -9,7 +9,40 @@ public class Loro extends Ave {
 		super(sexo,edad);
 		this.region = region;
 		this.color = color;
-		
+	}
+	
+	public void deDondeEres(){
+		switch(this.region){
+		case "N":
+			System.out.println("Norte");
+			break;
+		case "S":
+			System.out.println("Sur");
+			break;
+		case "E":
+			System.out.println("Este");
+			break;
+		case "O":
+			System.out.println("Oeste");
+			break;
+		}
+	}
+	
+	public void deDondeEres(String region){
+		switch(region){
+		case "N":
+			System.out.println("Norte");
+			break;
+		case "S":
+			System.out.println("Sur");
+			break;
+		case "E":
+			System.out.println("Este");
+			break;
+		case "O":
+			System.out.println("Oeste");
+			break;
+		}
 	}
 
 }

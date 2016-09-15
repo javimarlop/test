@@ -5,8 +5,26 @@ public class Main {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
+		Loro loro1 = new Loro("M",6,"E","amarillo");
+		Piolin piolin1 = new Piolin("H",8,16,5);
+		
+		loro1.quienSoy();
+		piolin1.quienSoy();
+		piolin1.altura();
+		loro1.deDondeEres();
+		
+		piolin1.tamaño = 45;
+		piolin1.altura();
+		
+		loro1.region = "N";
+		
+		Ave.numAves();
+		
 			//Primero generamos un objeto de la clase operaciones para poder usar los métodos.
-			Operaciones op = new Operaciones();
+			//Operaciones op = new Operaciones();
+			
+			// Al ser un método estático no hace falta en realidad crear una instancia, se puede llamar a la clase directamente.
+			//System.out.println(Operaciones.esPrimo(32));
 			
 //			System.out.println(op.esPrimo(32));
 			
@@ -32,9 +50,9 @@ public class Main {
 			//System.out.println(op.valor);
 			
 			//declaraciones de array
-			Libro[] libros = new Libro[3];
-			int[] numeros = new int[2];
-			String[] diasLab = {"Lunes","Martes","Miercoles"};
+//			Libro[] libros = new Libro[3];
+//			int[] numeros = new int[2];
+//			String[] diasLab = {"Lunes","Martes","Miercoles"};
 			
 			//System.out.println(diasLab.length);
 			//System.out.println(diasLab[2]);
@@ -51,11 +69,11 @@ public class Main {
 //				System.out.println(dia);
 //			}
 			
-			String a1 = "kk";
-			String a2 = "kk";
-			
-			System.out.println(a1.equals(a2));
-			System.out.println(a1==a2);
+//			String a1 = "kk";
+//			String a2 = "kk";
+//			
+//			System.out.println(a1.equals(a2));
+//			System.out.println(a1==a2);
 			
 			// si queremos saber si dos personas son iguales hay que sobreescribir el metodo equals y decidir que parametros hacen que sean iguales.
 	}
