@@ -2,37 +2,37 @@ package test;
 
 public class Canario extends Ave {
 
-	float tamaño;
+	float tamano;
 	
-	public Canario(String sexo , int edad){
+	public Canario(char sexo , int edad){
 		super(sexo,edad);
 	}
 	
-	public Canario(String sexo , int edad, float tamaño){
+	public Canario(char sexo , int edad, float tamaÃ±o){
 		super(sexo,edad);
-		this.tamaño = tamaño;
+		this.tamano = tamaÃ±o;
 	}
 	
-	public void altura(float tamaño){
-		if(tamaño>30){
+	public void altura(float tamaÃ±o){
+		if(tamano>30){
 			System.out.println("Alto");
 		}
-		if(tamaño<30 && tamaño>15){
+		if(tamano<30 && tamano>15){
 			System.out.println("Mediano");
 		}
-		if(tamaño<15){
+		if(tamaÃ±o<15){
 			System.out.println("Bajo");
 		}
 	}
 	
 	public void altura(){
-		if(this.tamaño>=30){
+		if(this.tamano>=30){
 			System.out.println("Alto");
 		}
-		if(this.tamaño<30 && this.tamaño>15){
+		if(this.tamano<30 && this.tamano>15){
 			System.out.println("Mediano");
 		}
-		if(this.tamaño<=15){
+		if(this.tamano<=15){
 			System.out.println("Bajo");
 		}
 	}

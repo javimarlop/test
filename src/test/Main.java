@@ -5,31 +5,48 @@ public class Main {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		Loro loro1 = new Loro("M",6,"E","amarillo");
-		Piolin piolin1 = new Piolin("H",8,16,5);
-		//Ave ave1 = new Ave("H",12); // al hacer abstracta la clase aves ya no se pueden crear aves porque no tiene sentido usar ese nivel de generalizacion
-		Canario canario1 = new Canario("M",5);
+		Piolin[] PiolinArray = new Piolin[3];
+		PiolinArray[0] = new Piolin('M', 2, 20, 100);
+		PiolinArray[1] = new Piolin('F', 3, 30, 10);
+		PiolinArray[2] = new Piolin('F', 8, 50, 5);
 		
-		loro1.quienSoy();
-		piolin1.quienSoy();
-		piolin1.altura();
-		loro1.deDondeEres();
+		 Loro loro1 = new Loro ('F', 5, 'N', "yellow");
+		  loro1.cantar();
+		  PiolinArray[0].cantar();
+		  PiolinArray[1].cantar();
+		  PiolinArray[2].cantar();
 		
-		piolin1.tamaño = 45;
-		piolin1.altura();
+		Ave gigio = PiolinArray[0];
 		
-		loro1.region = "N";
+		gigio.nombres.setNombreDueno("Pepe");
 		
-		Ave.numAves();
+		System.out.println(gigio.getNombreDueno());
 		
-		loro1.cantar();
-		piolin1.cantar();
-		canario1.cantar(); // No hay resultado porque es un método vacío
+//		Loro loro1 = new Loro('M',6,"E","amarillo");
+//		Piolin piolin1 = new Piolin('H',8,16,5);
+//		//Ave ave1 = new Ave('H',12); // al hacer abstracta la clase aves ya no se pueden crear aves porque no tiene sentido usar ese nivel de generalizacion
+//		Canario canario1 = new Canario('M',5);
+//		
+//		loro1.quienSoy();
+//		piolin1.quienSoy();
+//		piolin1.altura();
+//		loro1.deDondeEres();
+//		
+//		piolin1.tamano = 45;
+//		piolin1.altura();
+//		
+//		loro1.region = "N";
+//		
+//		Ave.numAves();
+//		
+//		loro1.cantar();
+//		piolin1.cantar();
+//		canario1.cantar(); // No hay resultado porque es un metodo vacio
 		
-			//Primero generamos un objeto de la clase operaciones para poder usar los métodos.
+			//Primero generamos un objeto de la clase operaciones para poder usar los mï¿½todos.
 			//Operaciones op = new Operaciones();
 			
-			// Al ser un método estático no hace falta en realidad crear una instancia, se puede llamar a la clase directamente.
+			// Al ser un meodo estatico no hace falta en realidad crear una instancia, se puede llamar a la clase directamente.
 			//System.out.println(Operaciones.esPrimo(32));
 			
 //			System.out.println(op.esPrimo(32));
