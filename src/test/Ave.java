@@ -1,6 +1,6 @@
 package test;
 
-public abstract class Ave {
+public class Ave { // abstract
 
 	private char sexo;
 	int edad;
@@ -36,6 +36,6 @@ public abstract class Ave {
 		System.out.println(this.edad);
 	}
 	
-	public abstract void cantar();
+	public void cantar(){} // abstract
 	
 }

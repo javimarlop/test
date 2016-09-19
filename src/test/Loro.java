@@ -1,6 +1,6 @@
 package test;
 
-public class Loro extends Ave {
+public class Loro extends Ave implements Hablador{
 	
 	private char region;
 	String color;
@@ -81,5 +81,5 @@ public class Loro extends Ave {
 	public void cantar(){
 		System.out.println("Piiio-piiiio loro bonito");	
 	}
-
+	public void hablar () {}
 }

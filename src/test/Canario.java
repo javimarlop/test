@@ -3,9 +3,11 @@ package test;
 public class Canario extends Ave {
 
 	float tamano;
+	boolean canta;
 	
-	public Canario(char sexo , int edad){
+	public Canario(char sexo , int edad, boolean canta){
 		super(sexo,edad);
+		this.canta = canta;
 	}
 	
 	public Canario(char sexo , int edad, float tamaño){
