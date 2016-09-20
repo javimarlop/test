@@ -14,7 +14,7 @@ public class Bedel extends Persona implements Hablador{
 	}
 	
 	public void hablar () {
-		System.out.println("Hola, soy una Bedel y sé hablar");
+		System.out.println("Hola, soy una Bedel y se hablar");
 	}
 	
 }

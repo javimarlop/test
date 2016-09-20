@@ -19,6 +19,6 @@ public class Piolin extends Canario implements Hablador{
 	}
 	
 	public void hablar () {
-		System.out.println("Hola, soy un Piolin y sé hablar");
+		System.out.println("Hola, soy un Piolin y se hablar");
 	}
 }

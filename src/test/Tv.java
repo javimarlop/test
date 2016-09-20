@@ -13,7 +13,7 @@ public class Tv extends Aparato implements Hablador{
 	}
 	
 	public void hablar () {
-		System.out.println("Hola, soy una TV y sé hablar");
+		System.out.println("Hola, soy una TV y se hablar");
 	}
 	
 }

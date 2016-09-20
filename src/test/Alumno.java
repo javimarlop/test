@@ -13,6 +13,6 @@ public class Alumno extends Persona implements Hablador {
 	
 	//public void hablar () {}
 	public void hablar () {
-		System.out.println("Hola, soy una Alumno y sé hablar");
+		System.out.println("Hola, soy una Alumno y se hablar");
 	}
 }

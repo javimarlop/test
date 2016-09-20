@@ -11,6 +11,6 @@ public class Radio extends Aparato implements Hablador{
 		this.potencia = potencia;
 	}
 	public void hablar () {
-		System.out.println("Hola, soy una RADIO y sé hablar");
+		System.out.println("Hola, soy una RADIO y se hablar");
 	}
 }

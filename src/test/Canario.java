@@ -10,19 +10,19 @@ public class Canario extends Ave {
 		this.canta = canta;
 	}
 	
-	public Canario(char sexo , int edad, float tamaño){
+	public Canario(char sexo , int edad, float tamano){
 		super(sexo,edad);
-		this.tamano = tamaño;
+		this.tamano = tamano;
 	}
 	
-	public void altura(float tamaño){
+	public void altura(float tamano){
 		if(tamano>30){
 			System.out.println("Alto");
 		}
 		if(tamano<30 && tamano>15){
 			System.out.println("Mediano");
 		}
-		if(tamaño<15){
+		if(tamano<15){
 			System.out.println("Bajo");
 		}
 	}

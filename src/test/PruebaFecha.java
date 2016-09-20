@@ -13,11 +13,11 @@ for (int i = 0; i < MAX_FECHAS; i++)
 	{
 	try
 	{
-		Fecha f = new Fecha(random(1, 2007), random(1, Fecha.MESES_ANO),
-				random(1, 31));
+		Fecha f = new Fecha(random(1900, 2107), random(1, 15), // Fecha.MESES_ANO
+				random(1, 61)); //61
 		System.out.println("Fecha correcta: " + f.toString());
 	}
-	catch(Exception e)
+	catch(FechaException e)
 		{
 		System.out.println("EXCEPTION: " + e.getMessage());
 		}
