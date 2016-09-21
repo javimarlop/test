@@ -1,13 +1,57 @@
 package test;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.StringTokenizer;
+
 public class Main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		Fecha f = new Fecha(1992,9,20);
 		
-		System.out.println(f);
+		// trocear vectores/cadenas por separador
+//		String texto = "Pepe|Toro|Lucas";
+//		
+//		StringTokenizer tokenizer = new StringTokenizer(texto, "|"); // tb puede omitirse el separador
+//		
+//		while(tokenizer.hasMoreTokens()){
+//			String nombre = tokenizer.nextToken(); // tb se puede: tokenizer.nextToken("|")
+//			System.out.println(nombre);
+//		}
+//		
+//		// Otra forma
+//		String[] nombres = texto.split("\\|");
+//		
+//		for(int i=0;i<nombres.length;i++){
+//			System.out.println(nombres[i]);
+//		}
+		
+		// Otra forma
+//		String textoSubstring = "Javier";
+//		
+//		System.out.println(textoSubstring.substring(0)); // el numero es el caracter donde quieres que empiece a mostrar
+		
+//		Calendar c = Calendar.getInstance();
+//		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");// HH:mm"); // MMM es el mes en nombre abreviado
+//		//System.out.println(sdf.format(c.getTime()));
+//		
+//		String fecha = "01/03/2015";
+//		
+//		try{
+//			Date f = sdf.parse(fecha); // de la manera que defino arriba
+//			c.setTime(f);
+//			System.out.println(sdf.format(c.getTime()));
+//		}catch (ParseException e){
+//			System.out.println("Fecha incorrecta");
+//		}
+		 
+		
+//		Fecha f = new Fecha(1992,9,20);
+//		
+//		System.out.println(f);
 		
 //		java.lang.Object[] ObArray = new java.lang.Object[12];
 //
