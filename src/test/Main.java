@@ -4,13 +4,137 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.List;
 import java.util.StringTokenizer;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.FileReader;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.Writer;
+import java.nio.charset.Charset;
+//import java.nio.*;
+import java.nio.file.DirectoryNotEmptyException;
+import java.nio.file.Files;
+import java.nio.file.NoSuchFileException;
+import java.nio.file.OpenOption;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
+import java.util.ArrayList;
+//import static java.nio.file.StandardOpenOption.APPEND;
+
+@SuppressWarnings("unused")
 
 public class Main {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+	
+	// Abrir archivo	
+//	try{
+//		Path path = Paths.get("C:\\Users\\Java\\Desktop\\test\\delete.txt");
+//		Files.delete(path);
+//	}catch (NoSuchFileException x){
+//		System.out.print("No existe!");
+//		} catch (DirectoryNotEmptyException x){
+//			System.out.print("El directorio contiene archvos!");
+//			}catch(IOException x){
+//				System.out.print("Algo ha ido mal... Compruebe que tiene permisos para borrar.");
+//			}
+//	
+//	// Leer/escribir archivo
+//	//OpenOption[] options = new OpenOption[] { APPEND };
+//	
+//	Path path2 = Paths.get("C:\\Users\\Java\\Desktop\\test\\fichero.txt");
+//	List<StringBuffer> datos = new ArrayList<StringBuffer>();
+//	//datos.add(new StringBuffer(""));
+//	datos.add(new StringBuffer("Linea1"));
+//	datos.add(new StringBuffer("Linea2"));
+//	try {
+//		Files.write(path2, datos, Charset.forName("UTF-8"),StandardOpenOption.APPEND);//options);
+//		List<String> lineas = Files.readAllLines(path2);
+//		
+//		for(String linea:lineas){
+//			System.out.println(linea);
+//		}
+//		
+//	} catch (IOException e) {
+//		// TODO Auto-generated catch block
+//		e.printStackTrace();
+//	}
+	
+
+//	public static void main(String[] args) throws IOException{
+//		
+//		Path path = Paths.get("C:\\Users\\Java\\Desktop\\test");
+//		System.out.println(path);
+//		boolean existe = Files.exists(path);
+//		System.out.println(existe);
 		
+		
+		
+	// Leer por lineas (Buffered streams)	
+		
+//		BufferedReader br = null;
+//	try{
+//		br = new BufferedReader(new FileReader("fichero.txt"));
+//		
+//		String linea = "";
+//		
+//		while((linea = br.readLine()) !=null){
+//						
+//			System.out.println(linea);
+//		}
+//		
+//		
+//		
+//	}catch (FileNotFoundException e){
+//		e.printStackTrace();
+//	} catch (IOException e){
+//		e.printStackTrace();
+//	}finally{
+//		if(br!=null){
+//		try {
+//			br.close();
+//		} catch (IOException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+//		}
+//	}
+		// Leer y escribir archivos de texto (CharacterStreams)
+//		
+//		FileInputStream fis = null;
+//		FileOutputStream fos = null;
+//		
+//		try{
+//			
+//		fis = new FileInputStream("fichero.txt");
+//		fos = new FileOutputStream("ficheroCopia.txt");
+//		
+//		int c;
+//		
+//		while((c = fis.read()) != -1){
+//			System.out.println((char)c);
+//			fos.write(c);
+//		}
+//		
+//		} catch (FileNotFoundException e){
+//			e.printStackTrace();
+//		} catch (IOException e){
+//			e.printStackTrace();
+//		}finally{
+//			if(fis!=null){
+//				try {
+//					fis.close();
+//				} catch (IOException e) {
+//					// TODO Auto-generated catch block
+//					e.printStackTrace();
+//				}
+//			}
+//		}
 		
 		// trocear vectores/cadenas por separador
 //		String texto = "Pepe|Toro|Lucas";
@@ -34,6 +158,7 @@ public class Main {
 //		
 //		System.out.println(textoSubstring.substring(0)); // el numero es el caracter donde quieres que empiece a mostrar
 		
+	//Fechas
 //		Calendar c = Calendar.getInstance();
 //		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");// HH:mm"); // MMM es el mes en nombre abreviado
 //		//System.out.println(sdf.format(c.getTime()));
@@ -53,6 +178,8 @@ public class Main {
 //		
 //		System.out.println(f);
 		
+	
+	//Ejercicio
 //		java.lang.Object[] ObArray = new java.lang.Object[12];
 //
 //		Persona Pe = new Persona("tizio", 25);
@@ -130,10 +257,12 @@ public class Main {
 //		piolin1.cantar();
 //		canario1.cantar(); // No hay resultado porque es un metodo vacio
 		
-			//Primero generamos un objeto de la clase operaciones para poder usar los m�todos.
+			//Primero generamos un objeto de la clase operaciones para poder usar los metodos.
 			//Operaciones op = new Operaciones();
 			
-			// Al ser un meodo estatico no hace falta en realidad crear una instancia, se puede llamar a la clase directamente.
+			// Al ser un meodo estatico no hace falta en realidad crear una instancia,
+			//se puede llamar a la clase directamente.
+	
 			//System.out.println(Operaciones.esPrimo(32));
 			
 //			System.out.println(op.esPrimo(32));
@@ -185,7 +314,8 @@ public class Main {
 //			System.out.println(a1.equals(a2));
 //			System.out.println(a1==a2);
 			
-			// si queremos saber si dos personas son iguales hay que sobreescribir el metodo equals y decidir que parametros hacen que sean iguales.
+			// si queremos saber si dos personas son iguales hay que sobreescribir
+			//el metodo equals y decidir que parametros hacen que sean iguales.
 	}
 
 }

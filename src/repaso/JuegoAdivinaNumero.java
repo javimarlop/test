@@ -36,13 +36,17 @@ public class JuegoAdivinaNumero extends Juego{
 			  System.out.println("Acertaste!");
 			  ActualizaRecord();
 		  }else{
-			  if(QuitaVida()){
+			  while(QuitaVida()){ // no es capaza de saber que lo has puesto bien! mirar p. 173
 				  if(variableInt>numAdivinar){
 					  System.out.println("El numero es menor del que ha introducido. Intentelo de nuevo!");
-					  Juega(); // cambiar por un for loop en base al numero de vidas!
-				  } else{
+					  EntrarNumero(); 
+				  } else if {
 					  System.out.println("El numero es mayor del que ha introducido. Intentelo de nuevo!");
-					  Juega();
+					  EntrarNumero();
+				  } else{
+					  System.out.println("Acertaste!");
+					  ActualizaRecord();
+					  break;
 				  }
 			  }
 		  }
