@@ -16,6 +16,10 @@ public class JuegoAdivinaNumero extends Juego{
 //		
 //	}
 	
+	public boolean ValidaNumero(int numAdivinar){
+		return true;
+	}
+	
 	public int EntrarNumero(){
 		
 		  //int variableInt;
@@ -30,9 +34,15 @@ public class JuegoAdivinaNumero extends Juego{
 	public void Juega(){
 		
 		ReiniciaPartida();
+		
+		if(ValidaNumero(numAdivinar)==false){
+			EntrarNumero();
+			//ReiniciaPartida();
+		}
+		
 		EntrarNumero();
 		
-			  while(QuitaVida()){ // mirar p. 173
+			  do while(QuitaVida()){ // mirar p. 173 tb
 				  if(variableInt>numAdivinar){
 					  System.out.println("El numero es menor del que ha introducido. Intentelo de nuevo!");
 					  EntrarNumero(); 
@@ -45,7 +55,8 @@ public class JuegoAdivinaNumero extends Juego{
 					  break;
 				  }
 			  }
-		  }
+		  
+	}
 		
 	}
 
