@@ -32,18 +32,14 @@ public class JuegoAdivinaNumero extends Juego{
 		ReiniciaPartida();
 		EntrarNumero();
 		
-		  if(variableInt==numAdivinar){
-			  System.out.println("Acertaste!");
-			  ActualizaRecord();
-		  }else{
-			  while(QuitaVida()){ // no es capaza de saber que lo has puesto bien! mirar p. 173
+			  while(QuitaVida()){ // mirar p. 173
 				  if(variableInt>numAdivinar){
 					  System.out.println("El numero es menor del que ha introducido. Intentelo de nuevo!");
 					  EntrarNumero(); 
-				  } else if {
+				  } else if (variableInt<numAdivinar){
 					  System.out.println("El numero es mayor del que ha introducido. Intentelo de nuevo!");
 					  EntrarNumero();
-				  } else{
+				  } else {
 					  System.out.println("Acertaste!");
 					  ActualizaRecord();
 					  break;
@@ -53,4 +49,4 @@ public class JuegoAdivinaNumero extends Juego{
 		
 	}
 
-}
+
