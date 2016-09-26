@@ -2,63 +2,45 @@ package repaso;
 
 public abstract class Juego {
 	
-	//public int numVidas;
-	private int VidasRestantes;
-	static private int record = 0;
-	final int vidasIniciales;
-	
-	//public abstract void juega();
-	
-	public static void muestraRecord(){
-		System.out.println(record);
-	}
+	private int vidasRestantes;
+	private int vidasIniciales;
+	private static int record = 0;
 	
 	public Juego(int vidasIniciales){
-		
-		this.VidasRestantes = vidasIniciales;
+		vidasRestantes = vidasIniciales;
 		this.vidasIniciales = vidasIniciales;
 	}
-
-	public void muestraVidasRestantes(){
-		System.out.println(VidasRestantes);
+	
+	public void mostrarVidas(){
+		System.out.println("Te quedan " + vidasRestantes);
 	}
 	
-	public boolean quitarVida(){ // creo que hay error...
-		VidasRestantes -=1;
-		if(VidasRestantes>0){
+	public boolean quitarVida(){
+		vidasRestantes--;
+		
+		if(vidasRestantes>0){
 			return true;
-		} else{
-			System.out.println("Juego terminado.");
+		}else{
+			System.out.println("Juego Terminado");
+			return false;
 		}
-		return false;
+	}
+	
+	public void reiniciarPartida(){
+		vidasRestantes = vidasIniciales;
 	}
 	
 	public void actualizaRecord(){
-		if(this.VidasRestantes==record){
-			System.out.println("Has empatado con el record!");
-		}
-		if(this.VidasRestantes>record){
-			record = VidasRestantes;
-			System.out.println("Se ha batido el record! El nuevo valor es: "+ record);
+		if(vidasRestantes == record){
+			System.out.println("Has empatado con el record actual");
+		}else if(vidasRestantes>record){
+			record = vidasRestantes;
+			System.out.println("Has batido el record!! el nuevo record es: " + record);
 		}
 	}
 	
-	public int reiniciaPartida(){
+	public int getVidasIniciales(){
+		return vidasIniciales;
+	}
 
-		return this.VidasRestantes = vidasIniciales;
-		
-	}
-	
-//	public static void main(String[] args) {
-//		Juego j1 = new Juego(5);
-//		
-//		j1.MuestraVidasRestantes();
-//		j1.numVidas-=1;
-//		j1.MuestraVidasRestantes();
-//		
-//		Juego j2 = new Juego(5);
-//		j2.MuestraVidasRestantes();
-//		j1.MuestraVidasRestantes();
-//	}
-	
 }

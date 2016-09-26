@@ -3,12 +3,16 @@ package repaso;
 //import java.util.Scanner;
 
 import leerConsola.Leer;
+
+import java.util.Date;
+import java.util.Random;
 import interfaces.Jugable;
 
 public class JuegoAdivinaNumero extends Juego implements Jugable{
 	
 	int numero;
 	int variableInt;
+	Random random = new Random(new Date().getTime()); //hace muy dificil adivinar el numero
 	
 	public JuegoAdivinaNumero(int vidasIniciales, int numero){
 		super(vidasIniciales);
@@ -19,7 +23,12 @@ public class JuegoAdivinaNumero extends Juego implements Jugable{
 //		
 //	}
 	
-	public boolean ValidaNumero(int numeroEntrada){
+	public JuegoAdivinaNumero(int vidasIniciales){
+		super(vidasIniciales);
+		//this.numero = numero;
+	}
+	
+	public boolean validaNumero(int numeroEntrada){
 		return true;
 	}
 	
@@ -36,14 +45,14 @@ public class JuegoAdivinaNumero extends Juego implements Jugable{
 	
 	public void juega(){
 		
-		reiniciaPartida();
+		reiniciarPartida();
 		boolean quedanVidas = true;
 		
 		do{ // la primera vez que pasa no le quita una vida?
 		
 		int numeroEntrada = Leer.leerEntero();
 		
-		if(ValidaNumero(numeroEntrada)){
+		if(validaNumero(numeroEntrada)){
 		if(numeroEntrada==numero){
 			System.out.println("Acertaste!");
 			actualizaRecord();
@@ -72,15 +81,19 @@ public class JuegoAdivinaNumero extends Juego implements Jugable{
 		//}
 
 	@Override
+	public void reiniciarPartida() {
+		super.reiniciarPartida();
+		numero = random.nextInt(11);
+	}
+	
+	@Override
 	public void muestraNombre() {
-		// TODO Auto-generated method stub
-		
+		System.out.println("Adivina un numero");
 	}
 
 	@Override
 	public void muestraInfo() {
-		// TODO Auto-generated method stub
-		
+		System.out.println("Tienes " + getVidasIniciales() + " para acertar un numero del 1 al 10");		
 	}
 		
 //		entrarNumero();
