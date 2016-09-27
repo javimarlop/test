@@ -21,13 +21,13 @@ public class Leer {
 		}
 	}
 	
-	public static char leerTexto(){
+	public static String leerTexto(){
 		try{
-//			String entrada = new Scanner(System.in);
-//			return entrada = Scanner.next();//.charAt(0);
+			entrada = new Scanner(System.in);
+			return entrada.next();
 		}catch (Exception e) {
 			//System.out.println("No has introducido un numero, te quito una vida por listo");
-			return ' ';
+			return "";
 		}		
 	}
 	

@@ -3,7 +3,7 @@ package juegos.letras;
 import repaso.Juego;
 import interfaces.Jugable;
 import leerConsola.Leer;
-import repaso.Juego;
+//import repaso.Juego;
 
 public class JuegoAhorcado extends Juego implements Jugable{
 
@@ -23,7 +23,7 @@ public class JuegoAhorcado extends Juego implements Jugable{
 		
 		//char[] stringToCharArray = palabra.toCharArray();
 		 
-		String palabraOculta;
+		String palabraOculta = "";
 		
 //		System.out.print("Palabra a adivinar: ");
 //		for (char output : stringToCharArray) {
@@ -35,12 +35,18 @@ public class JuegoAhorcado extends Juego implements Jugable{
 		do{
 		
 			System.out.println("Introduce caracter:");
-			char letra = Leer.leerTexto();
+			String letra = Leer.leerTexto();
 			
 			if(palabra.indexOf(letra)!=-1){
+				String palabraAux = "";
 				for(int i = 0;i<palabra;i++){
-					if(palabra.charAt(i)==(Char)letra String.)
+					if(palabra.charAt(i)==(Char).equals(letra)){
+						palabraAux = palabraAux + letra;
+					} else {
+						palabraAux = palabraAux + palabraOculta.charAt(i);
+					}
 				}
+				palabraOculta = palabraAux;
 			}
 			
 		} while(quitarVida());
