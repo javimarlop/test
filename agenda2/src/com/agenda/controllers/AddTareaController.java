@@ -34,8 +34,9 @@ public class AddTareaController extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String tarea = request.getParameter("tarea");
 		
+		//response.sendRedirect("Tareas");
 		Tarea t = new Tarea(tarea, false);
-		response.sendRedirect("tareas.html");
+		response.sendRedirect("tareas.jsp");
 		
 		//Add tarea a la DB
 		tareaService.addTarea(t);
@@ -47,7 +48,7 @@ public class AddTareaController extends HttpServlet {
 		// asi meto mi arraylist de tareas dentro de la sesion y asi puedo luego acceder desde tareas.jsp
 		request.getSession().setAttribute("tareas", tareas);
 		
-		//mostrarlas por consola
+		//mostrarlas por consola! (no web)
 		for(Tarea task: tareas){
 			System.out.println(task.getTarea());
 		}
