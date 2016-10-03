@@ -30,14 +30,23 @@ public class ServletCookie extends HttpServlet {
 		// TODO Auto-generated method stub
 		String user = request.getParameter("user");
 		String password = request.getParameter("password");
-		String todo = user + ":" + password;
+		String recordarme = request.getParameter("recordarme");
+		String todo = user + ":" + password + ":" + recordarme;
 		Cookie cookie = new Cookie("datosusuario",todo);
+
+		if(user.equals("yo") && password.equals("mismo")){
 		
-		cookie.setMaxAge(10000);
-		
-		response.addCookie(cookie);
-		
-		
+			if(recordarme.equals("true")){
+				cookie.setMaxAge(999999999);
+				
+				response.addCookie(cookie);
+				response.sendRedirect("dentro.jsp");
+			} else{
+			response.sendRedirect("dentro.jsp");
+			}
+		} else{
+			response.sendRedirect("entrada.html");
+		}
 	}
 
 	/**

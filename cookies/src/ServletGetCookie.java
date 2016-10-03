@@ -30,10 +30,13 @@ public class ServletGetCookie extends HttpServlet {
 		// TODO Auto-generated method stub
 		Cookie[] galletitas = request.getCookies();
 		
+		if(galletitas!=null){
 		for(Cookie c: galletitas){
 			String[] datos = c.getValue().split(":");
 			response.getWriter().write("Usuario: " + datos[0]); // c.getName() + ":" +
-			response.getWriter().write("Contraseña: " + datos[1]);
+			response.getWriter().write(" Contraseña: " + datos[1]);
+			response.getWriter().write(" Recordarme: " + datos[2]);
+		}
 		}
 		
 	}
